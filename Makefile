@@ -23,7 +23,7 @@ up-db:
 #up-docker: export UID_REMAP = $(shell id -u)
 #up-docker: export GID_REMAP = $(shell id -g)
 up-docker:
-	docker-compose -p ${COMPOSE_PROJECT_NAME} up -d mongodb meta_docker meta_system
+	docker-compose -p ${COMPOSE_PROJECT_NAME} up -d mongodb  meta_system
 
 inspect-docker:
 	docker-compose -p ${COMPOSE_PROJECT_NAME} run --rm --use-aliases meta_docker_client sh

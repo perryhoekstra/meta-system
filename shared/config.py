@@ -82,7 +82,7 @@ class MetaConfiguration(BaseSettings):
 
     # Configure MongoDB
     MONGO_HOST: str = "localhost"
-    MONGO_PORT: int = 27017
+    MONGO_PORT: int = 27018
     MONGO_DBNAME: str = "meta"
     MONGO_URI: str = uricompose("mongodb", host=MONGO_HOST, port=MONGO_PORT, path=posixpath.join("/", MONGO_DBNAME))
 

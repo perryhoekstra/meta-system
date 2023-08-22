@@ -82,7 +82,7 @@ Python packages are managed by [Poetry](https://github.com/python-poetry/poetry)
 * **Install** the relevant Python packages by running `poetry install`.
 * **Add** new Python dependencies by running `poetry add <package-name>`. This will update the _pyproject.toml_ file.
 * **Remove** Python dependencies by running `poetry add <existing-package-name>`. This will update the _pyproject.toml_ file.
-* **Export** dependencies to a _requirements.txt_ file by running `poetry export --without-hashes --dev -f requirements.txt > requirements.txt`
+* **Export** dependencies to a _requirements.txt_ file by running `poetry export --without-hashes --with dev -f requirements.txt > requirements.txt`
 
 Run `poetry` to see additional interfaces.
 

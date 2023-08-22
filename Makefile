@@ -78,7 +78,7 @@ build-processing: setup-venv
 	@echo "\nBuilding Python environment..."
 	cd ${ROOT_DIR} && . venv/bin/activate \
 	&& pip install -U pip wheel setuptools poetry \
-	&& poetry export --without-hashes --dev -f requirements.txt > requirements.txt \
+	&& poetry export --without-hashes --with dev -f requirements.txt > requirements.txt \
 	&& pip install -r requirements.txt
 
 build-evaluation:

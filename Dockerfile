@@ -1,9 +1,9 @@
-FROM python:3.8-slim-buster
+FROM python:3.11-slim-bookworm
 
-# Retrieve NodeJS 12.x Binaries (Make sure target system matches e.g. buster)
+# Retrieve NodeJS 18.x Binaries (Make sure target system matches e.g. bookworm)
 # https://hub.docker.com/_/node
-COPY --from=node:12-buster /usr/local/lib/node_modules /usr/local/lib/node_modules
-COPY --from=node:12-buster /usr/local/bin /usr/local/bin
+COPY --from=node:18-bookworm /usr/local/lib/node_modules /usr/local/lib/node_modules
+COPY --from=node:18-bookworm /usr/local/bin /usr/local/bin
 
 # Explicit User (top of file to avoid conflicts down the line with IDs)
 ENV APP_USER meta
